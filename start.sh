@@ -1,5 +1,6 @@
 cd ~
-~/startbitcash.sh
+./bitcashd -daemon -txindex -deprecatedrpc=accounts -deprecatedrpc=validateaddress
+./bitcashd -daemon -txindex -deprecatedrpc=accounts -deprecatedrpc=validateaddress -testnet
 
 sudo systemctl start mongod
 cd ~/explorer
@@ -8,6 +9,6 @@ rm tmp/cluster.pid
 ./dnsseeder.sh &
 cd ~/explorer
 ./start2.sh
-cd ~/discord-userbot
-./startbot.sh
 cd ~
+
+
